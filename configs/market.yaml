@@ -1,0 +1,38 @@
+exchange: bybit
+type: swap
+symbols:
+  - BTC/USDT:USDT
+  - ETH/USDT:USDT
+  - SOL/USDT:USDT
+  - XRP/USDT:USDT
+
+intervals:
+  ticker: 0.5
+  orderbook: 0.5
+  trades: 0.5
+  ohlcv:
+    1m: 1
+    5m: 3
+    15m: 5
+  funding_rate: 600
+  mark_price: 1
+
+orderbook:
+  depth: 50
+
+storage:
+  db_root: ./data
+  wal: true
+  batch_size: 200
+  keep_days: 7
+  fallback_queue_root: ./data/fallback
+
+logging:
+  level: INFO
+  file: ./logs/market_data.log
+  max_bytes: 10485760
+  backup_count: 5
+
+runtime:
+  auto_start: true
+  single_instance: true
