@@ -67,47 +67,54 @@ def main():
         print("未获取到K线数据")
     print()
 
-    # 2. 获取ticker数据
-    print("2. 获取ticker数据:")
-    ticker_data = reader.get_ticker(exchange, symbol)
-    if ticker_data:
-        print(f"最新价格: {ticker_data.get('close', 'N/A')}")
-        print(f"24h变化: {ticker_data.get('change', 'N/A')}")
-        print(f"24h成交量: {ticker_data.get('quoteVolume', 'N/A')}")
-        print(f"数据来源: 数据库")
-    else:
-        print("未获取到ticker数据")
-    print()
+    for _ in range(30):
+        time.sleep(1)
+        # 2. 获取ticker数据
+        print("2. 获取ticker数据:")
+        ticker_data = reader.get_ticker(exchange, symbol)
+        if ticker_data:
+            print(f"最新价格: {ticker_data.get('close', 'N/A')}")
+            print(f"24h变化: {ticker_data.get('change', 'N/A')}")
+            print(f"24h成交量: {ticker_data.get('quoteVolume', 'N/A')}")
+            print(f"数据来源: 数据库")
+        else:
+            print("未获取到ticker数据")
+        print()
     
-    # 3. 获取orderbook数据
-    print("3. 获取orderbook数据:")
-    orderbook_data = reader.get_order_book(exchange, symbol)
-    if orderbook_data:
-        bids = orderbook_data.get('bids', [])
-        asks = orderbook_data.get('asks', [])
-        if bids and asks:
-            print(f"最佳买价: {bids[0][0]} (数量: {bids[0][1]})")
-            print(f"最佳卖价: {asks[0][0]} (数量: {asks[0][1]})")
+    for _ in range(20):
+        time.sleep(1)
+        # 3. 获取orderbook数据
+        print("3. 获取orderbook数据:")
+        orderbook_data = reader.get_order_book(exchange, symbol)
+        if orderbook_data:
+            bids = orderbook_data.get('bids', [])
+            asks = orderbook_data.get('asks', [])
+            if bids and asks:
+                print(f"最佳买价: {bids[0][0]} (数量: {bids[0][1]})")
+                print(f"最佳卖价: {asks[0][0]} (数量: {asks[0][1]})")
             print(f"价差: {asks[0][0] - bids[0][0]}")
             print(f"数据来源: 数据库")
-    else:
-        print("未获取到orderbook数据")
-    print()
-    
-    # 4. 获取trades数据
-    print("4. 获取trades数据:")
-    trades_data = reader.get_trades(exchange, symbol, limit=10)
-    if trades_data:
-        print(f"最新10笔交易（从数据库）:")
-        for i, trade in enumerate(trades_data[:10]):
-            timestamp = datetime.fromtimestamp(trade['timestamp'] / 1000)
-            price = trade['price']
-            amount = trade['amount']
-            side = trade['side']
-            print(f"  {i+1}. 时间: {timestamp}, 价格: {price}, 数量: {amount}, 方向: {side}")
-    else:
-        print("未获取到trades数据")
-    print()
+        else:
+            print("未获取到orderbook数据")
+        print()
+
+        
+    for _ in range(20):
+        time.sleep(1)
+        # 4. 获取trades数据
+        print("4. 获取trades数据:")
+        trades_data = reader.get_trades(exchange, symbol, limit=10)
+        if trades_data:
+            print(f"最新10笔交易（从数据库）:")
+            for i, trade in enumerate(trades_data[:10]):
+                timestamp = datetime.fromtimestamp(trade['timestamp'] / 1000)
+                price = trade['price']
+                amount = trade['amount']
+                side = trade['side']
+                print(f"  {i+1}. 时间: {timestamp}, 价格: {price}, 数量: {amount}, 方向: {side}")
+        else:
+            print("未获取到trades数据")
+        print()
 
 if __name__ == "__main__":
     main()

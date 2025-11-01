@@ -18,13 +18,11 @@ exchanges:
       # 默认账号
       default:
         api_key: ""
-        secret: ""
-      
+        secret: ""    
       # 用户1账号
       user1:
         api_key: ""
-        secret: ""
-      
+        secret: ""     
       # 用户2账号
       user2:
         api_key: ""
@@ -34,7 +32,7 @@ exchanges:
   # Binance交易所配置
   binance:
     # 是否启用该交易所
-    enabled: true
+    enabled: false
     
     # 订阅的币对列表
     symbols:
@@ -59,13 +57,13 @@ exchanges:
 data_collection:
   # 各数据类型的推送间隔 (秒)
   intervals:
-    ticker: 1.0      # 行情数据间隔
+    ticker: 0.1      # 行情数据间隔
     orderbook: 1.0   # 订单簿数据间隔
     trades: 1.5      # 交易数据间隔
     ohlcv: 20.0      # K线数据间隔
     balance: 1.0    # 余额数据间隔
     orders: 1.0     # 订单数据间隔
-    mytrades: 5.0   # 我的交易数据间隔
+    mytrades: 1.0   # 我的交易数据间隔
     positions: 1.0  # 持仓数据间隔
   
   # K线时间周期配置
