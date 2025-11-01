@@ -32,9 +32,9 @@ def main():
     print()
     
     # 等待数据收集器收集数据
-    print("等待10秒钟，让数据收集器收集数据...")
+    print("等待30秒钟，让数据收集器收集数据...")
     import time
-    time.sleep(10)
+    time.sleep(30)
     print("数据收集完成，开始读取数据...")
     print()
     
@@ -53,7 +53,20 @@ def main():
     else:
         print("未获取到K线数据")
     print()
-    
+
+    # 1. 获取K线数据【验证兜底】
+    print("1. 获取K线数据(OHLCV):")
+    ohlcv_data = reader.get_ohlcv(exchange, symbol, timeframe='1h', limit=3)
+    if ohlcv_data:
+        print(f"获取到 {len(ohlcv_data)} 条K线数据（从交易所）")
+        print("最新3条K线数据:")
+        for i, candle in enumerate(ohlcv_data[-5:]):
+            timestamp = datetime.fromtimestamp(candle[0] / 1000)
+            print(f"  {i+1}. 时间: {timestamp}, 开盘: {candle[1]}, 最高: {candle[2]}, 最低: {candle[3]}, 收盘: {candle[4]}, 成交量: {candle[5]}")
+    else:
+        print("未获取到K线数据")
+    print()
+
     # 2. 获取ticker数据
     print("2. 获取ticker数据:")
     ticker_data = reader.get_ticker(exchange, symbol)

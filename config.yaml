@@ -10,15 +10,15 @@ exchanges:
     enabled: true    
     # 订阅的币对列表
     symbols:
-      # - "BTC/USDT" # 现货格式
+      - "BTC/USDT" # 现货格式
       - "XRP/USDT:USDT" # 合约格式
     
     # 多账号配置
     accounts:
       # 默认账号
       default:
-        api_key: "Lxxxxxxxxxxxxxxxxxl"
-        secret: "Txxxxxxxxxxxxxxxx"
+        api_key: ""
+        secret: ""
       
       # 用户1账号
       user1:
