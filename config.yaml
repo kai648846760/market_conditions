@@ -1,0 +1,122 @@
+# =============================================================================
+# Market Conditions 市场行情获取模块配置文件
+# =============================================================================
+
+# -------------------------- 交易所配置 --------------------------
+exchanges:
+  # Bybit交易所配置
+  bybit:
+    # 是否启用该交易所
+    enabled: true    
+    # 订阅的币对列表
+    symbols:
+      # - "BTC/USDT" # 现货格式
+      - "XRP/USDT:USDT" # 合约格式
+    
+    # 多账号配置
+    accounts:
+      # 默认账号
+      default:
+        api_key: "Lxxxxxxxxxxxxxxxxxl"
+        secret: "Txxxxxxxxxxxxxxxx"
+      
+      # 用户1账号
+      user1:
+        api_key: ""
+        secret: ""
+      
+      # 用户2账号
+      user2:
+        api_key: ""
+        secret: ""
+
+  
+  # Binance交易所配置
+  binance:
+    # 是否启用该交易所
+    enabled: true
+    
+    # 订阅的币对列表
+    symbols:
+      - "BTC/USDT" # 现货
+      - "ETH/USDT" # 现货
+      - "BNB/USDT" # 现货
+      - "XRP/USDT:USDT" # 合约
+    
+    # 多账号配置
+    accounts:
+      # 默认账号
+      default:
+        api_key: ""
+        secret: ""
+      
+      # 用户1账号
+      user1:
+        api_key: ""
+        secret: ""
+        
+# -------------------------- 数据收集配置 --------------------------
+data_collection:
+  # 各数据类型的推送间隔 (秒)
+  intervals:
+    ticker: 1.0      # 行情数据间隔
+    orderbook: 1.0   # 订单簿数据间隔
+    trades: 1.5      # 交易数据间隔
+    ohlcv: 20.0      # K线数据间隔
+    balance: 1.0    # 余额数据间隔
+    orders: 1.0     # 订单数据间隔
+    mytrades: 5.0   # 我的交易数据间隔
+    positions: 1.0  # 持仓数据间隔
+  
+  # K线时间周期配置
+  timeframes:
+    - "1m"   # 1分钟K线
+    - "5m"   # 5分钟K线
+    - "15m"  # 15分钟K线
+
+# -------------------------- 全局配置 --------------------------
+global:
+  # -------------------------- 数据库配置 --------------------------
+  database:
+    # 数据存储目录
+    data_dir: "./data"
+    
+    # 数据保留天数 (超过此天数的数据将被清理)
+    retention_days: 7
+    
+    # 数据清理策略
+    cleanup:
+      # 是否启用自动清理
+      enabled: true  
+      # 清理时间 (每天的时间点，格式: HH:MM)
+      time: "02:00"
+      # 清理间隔 (天)
+      interval: 1
+    
+    # 数据库连接配置
+    connection:
+      # 连接池大小
+      pool_size: 10
+      # 连接超时时间 (秒)
+      timeout: 30
+      # 最大重试次数
+      max_retries: 3
+  
+  # -------------------------- 日志配置 --------------------------
+  logging:
+    # 日志级别 (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    level: "INFO" 
+    # 日志文件路径
+    log_file: "./logs/market_conditions.log"  
+    # 日志格式
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    # 日志轮转配置
+    rotation:
+      # 按大小轮转 (MB)
+      max_size: 10
+      
+      # 保留的日志文件数量
+      backup_count: 5
+      
+      # 按时间轮转 (可选: midnight, H, D, W0-MON, etc.)
+      when: "midnight"

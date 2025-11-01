@@ -1,0 +1,1220 @@
+2025-11-01 16:14:57,654 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:14:57,654 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:14:57,654 - market_conditions - WARNING - 账户 bybit:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:14:57,654 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:14:57,654 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:14:57,654 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:14:57,661 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:14:57,661 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:14:57,661 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:14:57,661 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:14:57,661 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:14:57,661 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:14:57,662 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:14:57,662 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:14:57,662 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:14:57,662 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:14:57,752 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:14:57,752 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:14:57,755 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:15:08,892 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000&status=PreLaunch
+2025-11-01 16:15:08,893 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000&status=PreLaunch
+2025-11-01 16:15:08,893 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1h K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000&status=PreLaunch
+2025-11-01 16:15:08,893 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 4h K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000&status=PreLaunch
+2025-11-01 16:15:11,546 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1h K线数据失败: Connection timeout
+2025-11-01 16:15:11,546 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 4h K线数据失败: Connection timeout
+2025-11-01 16:15:37,284 - market_conditions - INFO - 使用数据库中的ticker数据: binance XRP/USDT:USDT
+2025-11-01 16:15:50,416 - market_conditions - ERROR - 获取K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 16:15:59,776 - market_conditions - INFO - 使用数据库中的ticker数据: binance XRP/USDT:USDT
+2025-11-01 16:15:59,776 - market_conditions - INFO - 使用数据库中的orderbook数据: binance XRP/USDT:USDT
+2025-11-01 16:15:59,776 - market_conditions - INFO - 使用数据库中的trades数据: binance XRP/USDT:USDT
+2025-11-01 16:15:59,777 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:15:59,777 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:15:59,777 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:15:59,777 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:16:00,777 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:16:00,777 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:16:01,048 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:16:01,048 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:16:01,048 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:16:06,054 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:18:59,521 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:18:59,522 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:18:59,522 - market_conditions - WARNING - 账户 bybit:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:18:59,522 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:18:59,522 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:18:59,522 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:18:59,529 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:18:59,529 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:18:59,529 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:18:59,529 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:18:59,529 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:18:59,529 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:18:59,529 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:18:59,529 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 16:18:59,530 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:18:59,530 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:18:59,530 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:18:59,530 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:18:59,530 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:18:59,530 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:18:59,530 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:18:59,619 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:18:59,619 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:18:59,624 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:19:10,002 - market_conditions - ERROR - 获取K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 16:19:12,942 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: Connection timeout
+2025-11-01 16:19:40,094 - market_conditions - INFO - 使用数据库中的ticker数据: binance XRP/USDT:USDT
+2025-11-01 16:20:00,954 - market_conditions - INFO - 使用数据库中的ticker数据: binance XRP/USDT:USDT
+2025-11-01 16:20:00,955 - market_conditions - INFO - 使用数据库中的orderbook数据: binance XRP/USDT:USDT
+2025-11-01 16:20:00,956 - market_conditions - INFO - 使用数据库中的trades数据: binance XRP/USDT:USDT
+2025-11-01 16:20:00,956 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:20:00,956 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:20:00,957 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:20:00,957 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:20:01,587 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:20:01,587 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:20:01,758 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:20:01,759 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:20:01,759 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:20:06,763 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:23:06,919 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:23:06,919 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:23:06,923 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:23:06,923 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:23:06,923 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:23:06,923 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:23:06,923 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:23:06,930 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:23:06,930 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:23:06,930 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:23:06,930 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:23:06,930 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:23:06,930 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:23:06,930 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:23:06,931 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 16:23:06,931 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:23:06,931 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:23:06,931 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:23:06,931 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:23:06,931 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:23:06,931 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:23:06,931 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:23:07,016 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:23:07,016 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:23:07,020 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:23:49,012 - market_conditions - INFO - 使用数据库中的ticker数据: binance XRP/USDT:USDT
+2025-11-01 16:23:59,912 - market_conditions - INFO - 接收到信号 2，正在停止数据收集器...
+2025-11-01 16:23:59,912 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:23:59,913 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:23:59,913 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:23:59,913 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:23:59,913 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:24:00,152 - market_conditions - INFO - 接收到信号 2，正在停止数据收集器...
+2025-11-01 16:24:00,153 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:24:00,164 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:24:00,165 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:24:00,351 - market_conditions - INFO - 接收到信号 2，正在停止数据收集器...
+2025-11-01 16:24:00,351 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:24:00,573 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:24:00,573 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:24:01,030 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:24:01,031 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:24:01,032 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:24:01,173 - market_conditions - INFO - 接收到信号 2，正在停止数据收集器...
+2025-11-01 16:24:01,173 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:24:06,179 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:27:07,707 - market_conditions - ERROR - 加载配置文件失败: expected str, bytes or os.PathLike object, not dict
+2025-11-01 16:27:07,708 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:27:07,708 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:27:07,708 - market_conditions - INFO - 启动了 0 个公共数据收集器任务
+2025-11-01 16:27:07,813 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:27:07,813 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:27:07,813 - market_conditions - WARNING - 收集器管理器已启动
+2025-11-01 16:27:37,816 - market_conditions - ERROR - 加载配置文件失败: expected str, bytes or os.PathLike object, not dict
+2025-11-01 16:27:37,818 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:27:44,993 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:27:44,994 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:27:44,994 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:27:49,999 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:28:13,580 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:28:13,581 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:28:13,585 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:28:13,585 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:28:13,585 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:28:13,585 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:28:13,586 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:28:13,592 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:28:13,593 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:28:13,593 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:28:13,593 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:28:13,593 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:28:13,593 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:28:13,593 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:28:13,593 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:28:13,593 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:28:13,593 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:28:13,676 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:28:13,676 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:28:13,676 - market_conditions - WARNING - 收集器管理器已启动
+2025-11-01 16:28:23,926 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 16:28:23,927 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 16:28:23,927 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 16:28:23,927 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 16:28:23,927 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 16:28:43,678 - market_conditions - ERROR - 加载配置文件失败: expected str, bytes or os.PathLike object, not dict
+2025-11-01 16:28:43,679 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:28:51,495 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:28:51,496 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:28:51,496 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:28:51,496 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:28:51,496 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:28:51,746 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:28:51,747 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:28:52,206 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:28:52,207 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:28:52,596 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:28:52,597 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:28:52,597 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:28:57,603 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:34:46,483 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:34:46,483 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:34:46,488 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:34:46,488 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:34:46,488 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:34:46,488 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:34:46,488 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:34:46,495 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:34:46,495 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:34:46,495 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:34:46,495 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:34:46,495 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:34:46,495 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:34:46,495 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:34:46,495 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:34:46,495 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:34:46,495 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:34:46,581 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 16:34:46,581 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 16:34:46,584 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 16:35:04,485 - market_conditions - INFO - 使用数据库中的ticker数据: bybit XRP/USDT:USDT
+2025-11-01 16:35:04,485 - market_conditions - INFO - 使用数据库中的orderbook数据: bybit XRP/USDT:USDT
+2025-11-01 16:35:04,486 - market_conditions - INFO - 使用数据库中的trades数据: bybit XRP/USDT:USDT
+2025-11-01 16:35:04,486 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:35:04,486 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:35:04,486 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:35:04,487 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:35:04,487 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:35:04,738 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:35:04,738 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:35:05,311 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:35:05,311 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:35:06,625 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:35:06,626 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:35:06,626 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:35:11,630 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:39:36,726 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:39:36,726 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:39:36,731 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:39:36,731 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:39:36,731 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:39:36,731 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:39:36,731 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:39:36,738 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:39:36,738 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:39:36,738 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:39:36,738 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:39:36,738 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:39:36,738 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:39:36,738 - market_conditions - INFO - 启动数据收集器
+2025-11-01 16:39:36,738 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 16:39:36,738 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:39:36,739 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:39:36,739 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:39:36,739 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:39:36,739 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 16:39:36,739 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 16:39:36,739 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:39:36,739 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:39:36,739 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:39:36,819 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 16:39:36,820 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 16:39:41,279 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:39:44,738 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:44,739 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 16:39:46,279 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:39:47,267 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:39:51,280 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:39:52,767 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:39:56,281 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:39:58,268 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:40:01,282 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:03,872 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:40:06,283 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:06,822 - market_conditions - ERROR - 加载配置文件失败: expected str, bytes or os.PathLike object, not dict
+2025-11-01 16:40:06,824 - market_conditions - ERROR - 未找到bybit交易所user1的API密钥配置
+2025-11-01 16:40:06,825 - market_conditions - ERROR - 未找到bybit交易所user2的API密钥配置
+2025-11-01 16:40:06,826 - market_conditions - ERROR - 未找到binance交易所default的API密钥配置
+2025-11-01 16:40:06,826 - market_conditions - ERROR - 未找到binance交易所user1的API密钥配置
+2025-11-01 16:40:06,827 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:40:06,827 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:40:06,827 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:40:06,827 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:40:06,828 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:40:07,081 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:40:07,082 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:40:07,475 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:40:07,476 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:40:07,623 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:40:07,623 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:40:07,624 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:40:12,629 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:40:25,635 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:40:25,636 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:40:25,640 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:40:25,640 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:40:25,640 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:40:25,640 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:40:25,640 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:40:25,647 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:40:25,647 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:40:25,647 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:40:25,647 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:40:25,647 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:40:25,647 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:40:25,647 - market_conditions - INFO - 启动数据收集器
+2025-11-01 16:40:25,647 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 16:40:25,647 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:40:25,647 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:40:25,647 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:40:25,648 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:40:25,648 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 16:40:25,648 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 16:40:25,648 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:40:25,648 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:40:25,648 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:40:25,733 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 16:40:25,733 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 16:40:28,193 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:33,193 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:35,904 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 16:40:35,905 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 16:40:38,194 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:39,802 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: Connection timeout
+2025-11-01 16:40:43,195 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:47,471 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:40:48,196 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:52,960 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:40:53,200 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:40:55,735 - market_conditions - ERROR - 加载配置文件失败: expected str, bytes or os.PathLike object, not dict
+2025-11-01 16:40:55,739 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:40:55,740 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:40:55,740 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:40:55,740 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:40:55,740 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:40:55,995 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:40:55,995 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:40:56,403 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:40:56,403 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:40:56,911 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:40:56,912 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:40:56,912 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:41:01,918 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 16:41:12,492 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 16:41:12,492 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 16:41:12,497 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 16:41:12,497 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 16:41:12,497 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:41:12,497 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 16:41:12,497 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 16:41:12,505 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 16:41:12,505 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 16:41:12,505 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 16:41:12,505 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 16:41:12,505 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 16:41:12,505 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动数据收集器
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 16:41:12,505 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 16:41:12,506 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:41:12,506 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 16:41:12,506 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 16:41:12,586 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 16:41:12,586 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 16:41:15,861 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:20,012 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:41:20,861 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:25,489 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:41:25,862 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:30,863 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:30,993 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:41:35,863 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:36,467 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:41:40,865 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 16:41:41,970 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: 'DatabaseManager' object has no attribute 'save_balance'
+2025-11-01 16:41:42,597 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 16:41:42,597 - market_conditions - INFO - 停止数据收集器
+2025-11-01 16:41:42,597 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 16:41:42,597 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 16:41:42,597 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 16:41:42,850 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 16:41:42,851 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 16:41:43,252 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 16:41:43,252 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 16:41:43,356 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 16:41:43,357 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 16:41:43,357 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 16:41:48,363 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 17:02:05,304 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 17:02:05,305 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 17:02:05,309 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 17:02:05,309 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 17:02:05,309 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:02:05,309 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 17:02:05,309 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 17:02:05,317 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 17:02:05,317 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 17:02:05,317 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 17:02:05,317 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:02:05,317 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 17:02:05,317 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动数据收集器
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 17:02:05,317 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 17:02:05,317 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:02:05,317 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 17:02:05,317 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:02:05,403 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 17:02:05,403 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 17:02:15,107 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/user/query-api?
+2025-11-01 17:02:15,107 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:02:15,107 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:02:15,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:15,849 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:15,849 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:15,849 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,850 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,851 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,852 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,852 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,852 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:15,852 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:16,119 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:02:17,062 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:17,063 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:17,063 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:17,063 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:17,307 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:17,308 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:17,308 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:17,308 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:18,415 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:27,548 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,548 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,549 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,549 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,549 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,549 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,549 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,550 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,551 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:02:27,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:27,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:27,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:27,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:27,848 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:02:29,181 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:02:29,181 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC
+2025-11-01 17:02:30,221 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,222 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:02:30,846 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:02:30,846 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:02:30,847 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/account/info?
+2025-11-01 17:02:31,935 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,935 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:31,936 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:02:35,425 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 17:02:35,426 - market_conditions - INFO - 停止数据收集器
+2025-11-01 17:02:35,426 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 17:02:35,426 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 17:02:35,426 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 17:02:35,678 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 17:02:35,678 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 17:02:35,679 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 17:02:35,679 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 17:02:35,679 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 17:02:35,679 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 17:02:35,679 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 17:02:40,684 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 17:03:14,542 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 17:03:14,542 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 17:03:14,546 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 17:03:14,546 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 17:03:14,546 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:03:14,546 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 17:03:14,546 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 17:03:14,553 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 17:03:14,553 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 17:03:14,553 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 17:03:14,553 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:03:14,553 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 17:03:14,554 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动数据收集器
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 17:03:14,554 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 17:03:14,554 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:03:14,554 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 17:03:14,554 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:03:14,637 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 17:03:14,637 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 17:03:17,096 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:22,096 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:24,847 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:03:24,848 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:03:27,098 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:28,117 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: Connection timeout
+2025-11-01 17:03:28,119 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: Connection timeout
+2025-11-01 17:03:32,098 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:37,100 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:42,107 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:03:42,851 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000
+2025-11-01 17:03:42,852 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=linear&limit=1000
+2025-11-01 17:03:44,644 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 17:03:44,645 - market_conditions - INFO - 停止数据收集器
+2025-11-01 17:03:44,645 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 17:03:44,645 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 17:03:44,645 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 17:03:44,896 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 17:03:44,897 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 17:03:45,363 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 17:03:45,364 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 17:03:45,428 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 17:03:45,429 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 17:03:45,429 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 17:03:50,435 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 17:04:24,006 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 17:04:24,006 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 17:04:24,010 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 17:04:24,010 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 17:04:24,010 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:04:24,010 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 17:04:24,010 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 17:04:24,017 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 17:04:24,017 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 17:04:24,017 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 17:04:24,017 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:04:24,017 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 17:04:24,017 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 17:04:24,017 - market_conditions - INFO - 启动数据收集器
+2025-11-01 17:04:24,017 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 17:04:24,017 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 17:04:24,018 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 17:04:24,018 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 17:04:24,018 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 17:04:24,018 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 17:04:24,018 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 17:04:24,018 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:04:24,018 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 17:04:24,018 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:04:24,104 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 17:04:24,104 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 17:04:33,847 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,848 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,849 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:33,850 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:34,851 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:04:34,851 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:04:34,852 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/user/query-api?
+2025-11-01 17:04:34,852 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:04:34,852 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:04:34,853 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:04:34,853 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:04:34,855 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:04:35,268 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:35,404 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:04:46,754 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,754 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,755 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,755 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,755 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,755 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,755 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,756 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,756 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,756 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,756 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,756 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,757 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:04:46,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:46,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:46,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:46,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:46,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:47,420 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:04:47,571 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:04:47,572 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:04:47,572 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:04:50,850 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:04:50,852 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:04:50,852 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/user/query-api?
+2025-11-01 17:04:54,118 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 17:04:54,118 - market_conditions - INFO - 停止数据收集器
+2025-11-01 17:04:54,118 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 17:04:54,118 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 17:04:54,118 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 17:04:54,371 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 17:04:54,371 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 17:04:54,372 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 17:04:54,372 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 17:04:54,372 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 17:04:54,373 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 17:04:54,373 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 17:04:59,379 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 17:05:56,198 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 17:05:56,198 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 17:05:56,202 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 17:05:56,202 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成
+2025-11-01 17:05:56,202 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:05:56,202 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 17:05:56,202 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 17:05:56,210 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 17:05:56,210 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 17:05:56,210 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 17:05:56,210 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:05:56,210 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 17:05:56,210 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动数据收集器
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 17:05:56,210 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 17:05:56,210 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:05:56,210 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 17:05:56,210 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:05:56,296 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 17:05:56,296 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 17:06:06,555 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/user/query-api?
+2025-11-01 17:06:06,555 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:06:06,555 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,851 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:06,852 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:07,733 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:07,733 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:07,733 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:08,255 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:08,255 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:08,256 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:08,256 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:08,256 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:08,568 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:08,568 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC
+2025-11-01 17:06:08,568 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC
+2025-11-01 17:06:09,106 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:09,106 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:09,106 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:09,106 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:19,668 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,668 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,668 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,669 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,670 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2025-11-01 17:06:19,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:19,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:19,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:19,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:19,850 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2025-11-01 17:06:20,029 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 17:06:20,475 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 17:06:21,852 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit GET https://api.bybit.com/v5/account/info?
+2025-11-01 17:06:22,281 - market_conditions - ERROR - 监听 bybit:default 余额数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:06:22,282 - market_conditions - ERROR - 监听 bybit:default 持仓数据失败: bybit GET https://api.bybit.com/v5/asset/coin/query-info?
+2025-11-01 17:06:22,704 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,704 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,704 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,704 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,705 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,705 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,705 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:22,705 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+2025-11-01 17:06:26,306 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 17:06:26,306 - market_conditions - INFO - 停止数据收集器
+2025-11-01 17:06:26,306 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 17:06:26,306 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 17:06:26,306 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 17:06:26,559 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 17:06:26,559 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 17:06:26,560 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 17:06:26,560 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 17:06:26,560 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 17:06:26,561 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 17:06:26,561 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 17:06:31,567 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 17:10:47,937 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 17:10:47,937 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 17:10:47,942 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 17:10:47,942 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 17:10:47,942 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:10:47,942 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 17:10:47,942 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 17:10:47,949 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 17:10:47,949 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 17:10:47,949 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 17:10:47,949 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 17:10:47,949 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 17:10:47,949 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 17:10:47,949 - market_conditions - INFO - 启动数据收集器
+2025-11-01 17:10:47,949 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 17:10:47,949 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 17:10:47,949 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 17:10:47,949 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 17:10:47,950 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 17:10:47,950 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 17:10:47,950 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 17:10:47,950 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:10:47,950 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 17:10:47,950 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 17:10:48,035 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 17:10:48,035 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 17:10:50,462 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:10:55,462 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:11:00,462 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:11:01,168 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: Connection timeout
+2025-11-01 17:11:01,168 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: Connection timeout
+2025-11-01 17:11:01,168 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: Connection timeout
+2025-11-01 17:11:01,169 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: Connection timeout
+2025-11-01 17:11:05,494 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:11:10,495 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:11:15,497 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 17:11:18,054 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 17:11:18,054 - market_conditions - INFO - 停止数据收集器
+2025-11-01 17:11:18,054 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 17:11:18,054 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 17:11:18,054 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 17:11:18,306 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 17:11:18,306 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 17:11:18,677 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 17:11:18,678 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 17:11:19,083 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 17:11:19,083 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 17:11:19,083 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 17:11:24,088 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 18:51:53,665 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 18:51:53,665 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 18:51:53,669 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 18:51:53,669 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 18:51:53,669 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 18:51:53,669 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 18:51:53,669 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 18:51:53,677 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 18:51:53,677 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 18:51:53,677 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 18:51:53,677 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 18:51:53,678 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 18:51:53,678 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 18:51:53,678 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 18:51:53,678 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 18:51:53,678 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 18:51:53,678 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 18:51:53,763 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 18:51:53,763 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 18:51:53,766 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 18:52:10,871 - market_conditions - INFO - 使用数据库中的ticker数据: bybit XRP/USDT:USDT
+2025-11-01 18:52:10,872 - market_conditions - INFO - 使用数据库中的orderbook数据: bybit XRP/USDT:USDT
+2025-11-01 18:52:10,872 - market_conditions - INFO - 使用数据库中的trades数据: bybit XRP/USDT:USDT
+2025-11-01 18:52:10,872 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 18:52:10,872 - market_conditions - INFO - 停止数据收集器
+2025-11-01 18:52:10,873 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 18:52:10,873 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 18:52:10,873 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 18:52:11,124 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 18:52:11,124 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 18:52:11,505 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 18:52:11,505 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 18:52:11,510 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 18:52:11,510 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 18:52:11,510 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 18:52:16,513 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 18:53:17,291 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 18:53:17,292 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 18:53:17,297 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 18:53:17,297 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 18:53:17,297 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 18:53:17,297 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 18:53:17,297 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 18:53:17,305 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 18:53:17,305 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 18:53:17,305 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 18:53:17,305 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 18:53:17,305 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 18:53:17,305 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 18:53:17,305 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 18:53:17,305 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 18:53:17,306 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 18:53:17,306 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 18:53:17,306 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 18:53:17,306 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 18:53:17,306 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 18:53:17,306 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 18:53:17,306 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 18:53:17,384 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 18:53:17,384 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 18:53:17,386 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 18:53:28,448 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 18:53:28,449 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 18:53:28,449 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 18:53:28,449 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 18:53:28,449 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=SOL
+2025-11-01 18:53:34,055 - market_conditions - INFO - 使用数据库中的ticker数据: bybit XRP/USDT:USDT
+2025-11-01 18:53:34,056 - market_conditions - INFO - 使用数据库中的orderbook数据: bybit XRP/USDT:USDT
+2025-11-01 18:53:34,056 - market_conditions - INFO - 从交易所获取trades数据: bybit XRP/USDT:USDT
+2025-11-01 18:53:40,225 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 18:53:40,226 - market_conditions - INFO - 停止数据收集器
+2025-11-01 18:53:40,226 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 18:53:40,226 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 18:53:40,227 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 18:53:40,478 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 18:53:40,478 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 18:53:40,854 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 18:53:40,854 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 18:53:40,877 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 18:53:40,877 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 18:53:40,878 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 18:53:45,881 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 19:00:19,307 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 19:00:19,307 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 19:00:19,311 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 19:00:19,311 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 19:00:19,312 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:00:19,312 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 19:00:19,312 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 19:00:19,319 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 19:00:19,320 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 19:00:19,320 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 19:00:19,320 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:00:19,320 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 19:00:19,320 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 19:00:19,320 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 19:00:19,320 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:00:19,320 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 19:00:19,320 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:00:19,404 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 19:00:19,404 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 19:00:19,407 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 19:00:28,953 - market_conditions - INFO - 接收到信号 15，正在停止数据收集器...
+2025-11-01 19:00:28,954 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:00:28,954 - market_conditions - INFO - 停止数据收集器
+2025-11-01 19:00:28,954 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 19:00:28,954 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 19:00:28,954 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 19:00:29,205 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 19:00:29,205 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 19:00:29,208 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 19:00:29,208 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 19:00:29,208 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 19:00:29,208 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 19:00:29,208 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 19:00:31,263 - market_conditions - INFO - 接收到信号 15，正在停止数据收集器...
+2025-11-01 19:00:31,263 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:00:36,264 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 19:01:06,685 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 19:01:06,685 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 19:01:06,690 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 19:01:06,690 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 19:01:06,690 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:06,690 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:06,690 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 19:01:06,697 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 19:01:06,697 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 19:01:06,697 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:06,698 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:06,698 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 19:01:06,698 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 19:01:06,698 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 19:01:06,698 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:01:06,698 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 19:01:06,698 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:01:06,777 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 19:01:06,777 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 19:01:06,780 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 19:01:16,180 - market_conditions - INFO - 接收到信号 15，正在停止数据收集器...
+2025-11-01 19:01:16,180 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:01:16,181 - market_conditions - INFO - 停止数据收集器
+2025-11-01 19:01:16,181 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 19:01:16,181 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 19:01:16,181 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 19:01:16,432 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 19:01:16,432 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 19:01:16,432 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 19:01:16,433 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 19:01:16,433 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 19:01:16,433 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 19:01:16,433 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 19:01:21,436 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 19:01:28,259 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 19:01:28,259 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 19:01:28,263 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 19:01:28,263 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 19:01:28,263 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:28,263 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:28,263 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 19:01:28,271 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 19:01:28,271 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 19:01:28,271 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:28,271 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:01:28,271 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 19:01:28,271 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 19:01:28,271 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 19:01:28,272 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:01:28,272 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 19:01:28,272 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:01:28,352 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 19:01:28,352 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 19:01:28,355 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 19:01:48,374 - market_conditions - INFO - 使用数据库中的ticker数据: bybit XRP/USDT:USDT
+2025-11-01 19:01:48,375 - market_conditions - INFO - 使用数据库中的orderbook数据: bybit XRP/USDT:USDT
+2025-11-01 19:01:48,375 - market_conditions - INFO - 使用数据库中的trades数据: bybit XRP/USDT:USDT
+2025-11-01 19:01:48,375 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:01:48,375 - market_conditions - INFO - 停止数据收集器
+2025-11-01 19:01:48,375 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 19:01:48,375 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 19:01:48,375 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 19:01:48,626 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 19:01:48,627 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 19:01:49,017 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 19:01:49,017 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 19:01:49,995 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 19:01:49,997 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 19:01:49,998 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 19:01:55,003 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 19:06:03,304 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 19:06:03,305 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 19:06:03,309 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 19:06:03,309 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 19:06:03,310 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:06:03,310 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 19:06:03,310 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 19:06:03,317 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 19:06:03,317 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 19:06:03,317 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 19:06:03,317 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:06:03,317 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 19:06:03,317 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动公共数据收集器
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动了 2 个公共数据收集器任务
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 19:06:03,317 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 19:06:03,317 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:06:03,317 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 19:06:03,317 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:06:03,402 - market_conditions - INFO - 收集器管理器（仅公共数据）已启动
+2025-11-01 19:06:03,402 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: True）
+2025-11-01 19:06:03,405 - market_conditions - INFO - 数据读取器初始化完成
+2025-11-01 19:06:13,383 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,384 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:13,385 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:16,666 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT ticker数据失败: Connection timeout
+2025-11-01 19:06:16,666 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT orderbook数据失败: Connection timeout
+2025-11-01 19:06:16,667 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT trade数据失败: Connection timeout
+2025-11-01 19:06:16,667 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 1m K线数据失败: Connection timeout
+2025-11-01 19:06:16,667 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 5m K线数据失败: Connection timeout
+2025-11-01 19:06:16,667 - market_conditions - ERROR - 监听 bybit XRP/USDT:USDT 15m K线数据失败: Connection timeout
+2025-11-01 19:06:19,434 - market_conditions - INFO - 使用数据库中的ticker数据: bybit XRP/USDT:USDT
+2025-11-01 19:06:19,434 - market_conditions - INFO - 从交易所获取orderbook数据: bybit XRP/USDT:USDT
+2025-11-01 19:06:24,387 - market_conditions - ERROR - 监听 binance ETH/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:24,388 - market_conditions - ERROR - 监听 binance BNB/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:24,388 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:24,388 - market_conditions - ERROR - 监听 binance BTC/USDT orderbook数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,419 - market_conditions - ERROR - 监听 binance BTC/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,432 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,437 - market_conditions - ERROR - 监听 binance ETH/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BNB/USDT ticker数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BTC/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance ETH/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BNB/USDT trade数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance XRP/USDT:USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,438 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: binance GET https://api.binance.com/api/v3/exchangeInfo
+2025-11-01 19:06:25,842 - market_conditions - INFO - 使用数据库中的trades数据: bybit XRP/USDT:USDT
+2025-11-01 19:06:25,843 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:06:25,844 - market_conditions - INFO - 停止数据收集器
+2025-11-01 19:06:25,844 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 19:06:25,844 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 19:06:25,844 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 19:06:26,095 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 19:06:26,095 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 19:06:26,096 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 19:06:26,096 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 19:06:26,537 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 19:06:26,538 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 19:06:26,538 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 19:06:31,543 - market_conditions - INFO - 收集器管理器已停止
+2025-11-01 19:10:47,958 - market_conditions - INFO - 交易所 bybit 公共数据连接初始化成功
+2025-11-01 19:10:47,958 - market_conditions - INFO - 公共数据收集器 bybit 初始化完成，订阅币对: 1 个
+2025-11-01 19:10:47,963 - market_conditions - INFO - 交易所 bybit:default 私有数据连接初始化成功
+2025-11-01 19:10:47,963 - market_conditions - INFO - 私有数据收集器 bybit:default 初始化完成，用户ID: Lr9E7W_default
+2025-11-01 19:10:47,963 - market_conditions - WARNING - 账户 bybit:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:10:47,963 - market_conditions - WARNING - 账户 bybit:user2 缺少API密钥，跳过私有数据收集
+2025-11-01 19:10:47,963 - market_conditions - INFO - 交易所 bybit 收集器初始化完成
+2025-11-01 19:10:47,970 - market_conditions - INFO - 交易所 binance 公共数据连接初始化成功
+2025-11-01 19:10:47,970 - market_conditions - INFO - 公共数据收集器 binance 初始化完成，订阅币对: 4 个
+2025-11-01 19:10:47,970 - market_conditions - WARNING - 账户 binance:default 缺少API密钥，跳过私有数据收集
+2025-11-01 19:10:47,970 - market_conditions - WARNING - 账户 binance:user1 缺少API密钥，跳过私有数据收集
+2025-11-01 19:10:47,970 - market_conditions - INFO - 交易所 binance 收集器初始化完成
+2025-11-01 19:10:47,970 - market_conditions - INFO - 数据收集器初始化完成
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动数据收集器
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动了 3 个数据收集器任务
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动 bybit 公共数据收集
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动了 1 个 bybit 公共数据收集任务
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动 binance 公共数据收集
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动了 2 个 binance 公共数据收集任务
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动 bybit:default 私有数据收集
+2025-11-01 19:10:47,970 - market_conditions - INFO - 启动了 3 个 bybit:default 私有数据收集任务
+2025-11-01 19:10:47,971 - market_conditions - INFO - 开始收集 bybit 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:10:47,971 - market_conditions - INFO - 开始收集 binance 现货数据: ['BTC/USDT', 'ETH/USDT', 'BNB/USDT']
+2025-11-01 19:10:47,971 - market_conditions - INFO - 开始收集 binance 合约数据: ['XRP/USDT:USDT']
+2025-11-01 19:10:48,055 - market_conditions - INFO - 收集器管理器已启动
+2025-11-01 19:10:48,055 - market_conditions - INFO - 数据收集器已自动启动（仅公共数据: False）
+2025-11-01 19:10:50,499 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BTC/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BTC/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BTC/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance ETH/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance ETH/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance ETH/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BNB/USDT 1m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BNB/USDT 5m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,414 - market_conditions - ERROR - 监听 binance BNB/USDT 15m K线数据失败: Connection closed by remote server, closing code 1008
+2025-11-01 19:10:55,498 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:11:00,498 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:11:05,499 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:11:10,500 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:11:15,501 - market_conditions - ERROR - 监听 bybit:default 订单数据失败: bybit fetchOrders() is not supported after the 5/02 update for UTA accounts, please use fetchOpenOrders, fetchClosedOrders or fetchCanceledOrders
+2025-11-01 19:11:18,078 - market_conditions - INFO - 程序退出，正在停止数据收集器...
+2025-11-01 19:11:18,078 - market_conditions - INFO - 停止数据收集器
+2025-11-01 19:11:18,078 - market_conditions - INFO - 停止 bybit 公共数据收集
+2025-11-01 19:11:18,078 - market_conditions - INFO - 停止 binance 公共数据收集
+2025-11-01 19:11:18,078 - market_conditions - INFO - 停止 bybit:default 私有数据收集
+2025-11-01 19:11:18,332 - market_conditions - INFO - 已关闭交易所 bybit:default 私有数据连接
+2025-11-01 19:11:18,332 - market_conditions - INFO - bybit:default 私有数据收集器已停止
+2025-11-01 19:11:18,709 - market_conditions - INFO - 已关闭交易所 binance 公共数据连接
+2025-11-01 19:11:18,709 - market_conditions - INFO - binance 公共数据收集器已停止
+2025-11-01 19:11:18,722 - market_conditions - INFO - 已关闭交易所 bybit 公共数据连接
+2025-11-01 19:11:18,722 - market_conditions - INFO - bybit 公共数据收集器已停止
+2025-11-01 19:11:18,722 - market_conditions - INFO - 数据收集器已停止
+2025-11-01 19:11:23,728 - market_conditions - INFO - 收集器管理器已停止
