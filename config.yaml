@@ -17,8 +17,9 @@ exchanges:
     accounts:
       # 默认账号
       default:
-        api_key: ""
-        secret: ""    
+        api_key: "xxxxxxxxxxx"
+        secret: "TxxxxxxxxxxxxxWrxxxx"
+
       # 用户1账号
       user1:
         api_key: ""

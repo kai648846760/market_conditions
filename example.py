@@ -17,8 +17,8 @@ from src.collector import get_collector
 from src.reader import DataReader
 
 def main():
-    # 获取自动启动的数据收集器
-    collector = get_collector()
+    # 获取自动启动的数据收集器（包含私有数据收集器）
+    collector = get_collector(public_only=False)
     
     # 初始化数据读取器
     reader = DataReader()
@@ -38,82 +38,132 @@ def main():
     print("数据收集完成，开始读取数据...")
     print()
     
-    # ===== 公共API数据示例 =====
-    print("===== 公共API数据示例 =====\n")
+    # # ================================== 公共API数据示例 ==================================
+    # print("===== 公共API数据示例 =====\n")
     
-    # 1. 获取K线数据
-    print("1. 获取K线数据(OHLCV):")
-    ohlcv_data = reader.get_ohlcv(exchange, symbol, timeframe='1m', limit=10)
-    if ohlcv_data:
-        print(f"获取到 {len(ohlcv_data)} 条K线数据（从数据库）")
-        print("最新5条K线数据:")
-        for i, candle in enumerate(ohlcv_data[-5:]):
-            timestamp = datetime.fromtimestamp(candle[0] / 1000)
-            print(f"  {i+1}. 时间: {timestamp}, 开盘: {candle[1]}, 最高: {candle[2]}, 最低: {candle[3]}, 收盘: {candle[4]}, 成交量: {candle[5]}")
-    else:
-        print("未获取到K线数据")
-    print()
+    # # 1. 获取K线数据
+    # print("1. 获取K线数据(OHLCV):")
+    # ohlcv_data = reader.get_ohlcv(exchange, symbol, timeframe='1m', limit=10)
+    # if ohlcv_data:
+    #     print(f"获取到 {len(ohlcv_data)} 条K线数据（从数据库）")
+    #     print("最新5条K线数据:")
+    #     for i, candle in enumerate(ohlcv_data[-5:]):
+    #         timestamp = datetime.fromtimestamp(candle[0] / 1000)
+    #         print(f"  {i+1}. 时间: {timestamp}, 开盘: {candle[1]}, 最高: {candle[2]}, 最低: {candle[3]}, 收盘: {candle[4]}, 成交量: {candle[5]}")
+    # else:
+    #     print("未获取到K线数据")
+    # print()
 
-    # 1. 获取K线数据【验证兜底】
-    print("1. 获取K线数据(OHLCV):")
-    ohlcv_data = reader.get_ohlcv(exchange, symbol, timeframe='1h', limit=3)
-    if ohlcv_data:
-        print(f"获取到 {len(ohlcv_data)} 条K线数据（从交易所）")
-        print("最新3条K线数据:")
-        for i, candle in enumerate(ohlcv_data[-5:]):
-            timestamp = datetime.fromtimestamp(candle[0] / 1000)
-            print(f"  {i+1}. 时间: {timestamp}, 开盘: {candle[1]}, 最高: {candle[2]}, 最低: {candle[3]}, 收盘: {candle[4]}, 成交量: {candle[5]}")
-    else:
-        print("未获取到K线数据")
-    print()
+    # # 1. 获取K线数据【验证兜底】
+    # print("1. 获取K线数据(OHLCV):")
+    # ohlcv_data = reader.get_ohlcv(exchange, symbol, timeframe='1h', limit=3)
+    # if ohlcv_data:
+    #     print(f"获取到 {len(ohlcv_data)} 条K线数据（从交易所）")
+    #     print("最新3条K线数据:")
+    #     for i, candle in enumerate(ohlcv_data[-5:]):
+    #         timestamp = datetime.fromtimestamp(candle[0] / 1000)
+    #         print(f"  {i+1}. 时间: {timestamp}, 开盘: {candle[1]}, 最高: {candle[2]}, 最低: {candle[3]}, 收盘: {candle[4]}, 成交量: {candle[5]}")
+    # else:
+    #     print("未获取到K线数据")
+    # print()
 
-    for _ in range(30):
-        time.sleep(1)
-        # 2. 获取ticker数据
-        print("2. 获取ticker数据:")
-        ticker_data = reader.get_ticker(exchange, symbol)
-        if ticker_data:
-            print(f"最新价格: {ticker_data.get('close', 'N/A')}")
-            print(f"24h变化: {ticker_data.get('change', 'N/A')}")
-            print(f"24h成交量: {ticker_data.get('quoteVolume', 'N/A')}")
-            print(f"数据来源: 数据库")
-        else:
-            print("未获取到ticker数据")
-        print()
+    # for _ in range(30):
+    #     time.sleep(1)
+    #     # 2. 获取ticker数据
+    #     print("2. 获取ticker数据:")
+    #     ticker_data = reader.get_ticker(exchange, symbol)
+    #     if ticker_data:
+    #         print(f"最新价格: {ticker_data.get('close', 'N/A')}")
+    #         print(f"24h变化: {ticker_data.get('change', 'N/A')}")
+    #         print(f"24h成交量: {ticker_data.get('quoteVolume', 'N/A')}")
+    #         print(f"数据来源: 数据库")
+    #     else:
+    #         print("未获取到ticker数据")
+    #     print()
     
+    # for _ in range(20):
+    #     time.sleep(1)
+    #     # 3. 获取orderbook数据
+    #     print("3. 获取orderbook数据:")
+    #     orderbook_data = reader.get_order_book(exchange, symbol)
+    #     if orderbook_data:
+    #         bids = orderbook_data.get('bids', [])
+    #         asks = orderbook_data.get('asks', [])
+    #         if bids and asks:
+    #             print(f"最佳买价: {bids[0][0]} (数量: {bids[0][1]})")
+    #             print(f"最佳卖价: {asks[0][0]} (数量: {asks[0][1]})")
+    #         print(f"价差: {asks[0][0] - bids[0][0]}")
+    #         print(f"数据来源: 数据库")
+    #     else:
+    #         print("未获取到orderbook数据")
+    #     print()
+
+
+    # for _ in range(20):
+    #     time.sleep(1)
+    #     # 4. 获取trades数据
+    #     print("4. 获取trades数据:")
+    #     trades_data = reader.get_trades(exchange, symbol, limit=10)
+    #     if trades_data:
+    #         print(f"最新10笔交易（从数据库）:")
+    #         for i, trade in enumerate(trades_data[:10]):
+    #             timestamp = datetime.fromtimestamp(trade['timestamp'] / 1000)
+    #             price = trade['price']
+    #             amount = trade['amount']
+    #             side = trade['side']
+    #             print(f"  {i+1}. 时间: {timestamp}, 价格: {price}, 数量: {amount}, 方向: {side}")
+    #     else:
+    #         print("未获取到trades数据")
+    #     print()
+
+# ================================== 私有api验证 ==================================
+    from src.private_reader import PrivateDataReader
+
     for _ in range(20):
         time.sleep(1)
-        # 3. 获取orderbook数据
-        print("3. 获取orderbook数据:")
-        orderbook_data = reader.get_order_book(exchange, symbol)
-        if orderbook_data:
-            bids = orderbook_data.get('bids', [])
-            asks = orderbook_data.get('asks', [])
-            if bids and asks:
-                print(f"最佳买价: {bids[0][0]} (数量: {bids[0][1]})")
-                print(f"最佳卖价: {asks[0][0]} (数量: {asks[0][1]})")
-            print(f"价差: {asks[0][0] - bids[0][0]}")
-            print(f"数据来源: 数据库")
-        else:
-            print("未获取到orderbook数据")
-        print()
-
+        # 1. 获取用户余额
+        print("1. 获取用户余额:")
         
-    for _ in range(20):
-        time.sleep(1)
-        # 4. 获取trades数据
-        print("4. 获取trades数据:")
-        trades_data = reader.get_trades(exchange, symbol, limit=10)
-        if trades_data:
-            print(f"最新10笔交易（从数据库）:")
-            for i, trade in enumerate(trades_data[:10]):
-                timestamp = datetime.fromtimestamp(trade['timestamp'] / 1000)
-                price = trade['price']
-                amount = trade['amount']
-                side = trade['side']
-                print(f"  {i+1}. 时间: {timestamp}, 价格: {price}, 数量: {amount}, 方向: {side}")
+        private_reader = PrivateDataReader()
+        # 使用简短用户名
+        balance_data = private_reader.get_balance(exchange)  # 使用默认账户
+        if balance_data:
+            print(f"用户余额: {balance_data}")
         else:
-            print("未获取到trades数据")
+            print("未获取到用户余额")
+        print()
+    
+    for _ in range(10):
+        time.sleep(1)
+        # 2. 获取用户订单
+        print("2. 获取用户订单:")
+        orders_data = private_reader.get_orders(exchange)  # 使用默认账户
+        if orders_data:
+            print(f"用户订单: {orders_data}")
+        else:
+            print("未获取到用户订单")
+        print()
+
+    for _ in range(10):
+        time.sleep(1)
+        # 3. 获取用户成交记录
+        print("3. 获取用户成交记录:")
+        trades_data = private_reader.get_my_trades(exchange)  # 使用默认账户
+        if trades_data:
+            print(f"用户成交记录: {trades_data}")
+        else:
+            print("未获取到用户成交记录")
+        print()
+
+    for _ in range(10):
+        time.sleep(1)
+        # 4. 获取用户持仓
+        print("4. 获取用户持仓:")
+        positions_data = private_reader.get_positions(exchange)  # 使用默认账户
+        if positions_data:
+            print(f"用户持仓: {positions_data}")
+        else:
+            print("未获取到用户持仓")
         print()
 
 if __name__ == "__main__":

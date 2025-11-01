@@ -485,6 +485,49 @@ class PublicDataCollector:
             except Exception as e:
                 Logger.error(f"监听 {self.exchange_name} {symbol} {timeframe} K线数据失败: {str(e)}")
                 await asyncio.sleep(5)  # 出错后等待5秒再重试
+
+    @retry_on_failure(max_retries=3, delay=2.0)
+    async def _watch_mytrades(self, interval: float):
+        """
+        监听成交记录数据
+        
+        Args:
+            interval: 监听间隔(秒)
+        """
+        Logger.debug(f"开始监听 {self.exchange_name}:{self.account_name} 成交记录数据")
+        
+        while True:
+            try:
+                # 获取成交记录数据
+                try:
+                    mytrades = await self.exchange.fetch_my_trades()
+                except Exception as e:
+                    # 尝试使用其他方法获取成交记录
+                    Logger.warning(f"标准fetch_my_trades失败，尝试其他方法: {str(e)}")
+                    # 创建一个空的成交记录列表
+                    mytrades = []
+                
+                # 处理成交记录数据
+                for trade in mytrades:
+                    # 添加账户信息，但不覆盖原始数据
+                    processed_trade = trade.copy()
+                    processed_trade['account'] = self.account_name
+                    processed_trade['collector_timestamp'] = get_current_timestamp_ms()
+                    
+                    # 存储到数据库
+                    self.db_manager.insert_data(self.exchange_name, trade.get('symbol', ''), 'mytrades', processed_trade, self.user_id)
+                    
+                    # 通知回调函数
+                    self._notify_callbacks('mytrade', self.exchange_name, self.account_name, trade)
+                
+                Logger.debug(f"收到 {self.exchange_name}:{self.account_name} 成交记录数据: {len(mytrades)} 笔")
+                
+                # 等待下一次收集
+                await asyncio.sleep(interval)
+                
+            except Exception as e:
+                Logger.error(f"监听 {self.exchange_name}:{self.account_name} 成交记录数据失败: {str(e)}")
+                await asyncio.sleep(5)  # 出错后等待5秒再重试
     
     def _timeframe_to_ms(self, timeframe: str) -> int:
         """
@@ -636,6 +679,13 @@ class PrivateDataCollector:
             )
             self.tasks.append(task)
         
+        # 创建成交记录数据收集任务
+        if 'mytrades' in intervals:
+            task = asyncio.create_task(
+                self._watch_mytrades(intervals['mytrades'])
+            )
+            self.tasks.append(task)
+        
         # 创建持仓数据收集任务
         if 'positions' in intervals:
             task = asyncio.create_task(
@@ -681,7 +731,20 @@ class PrivateDataCollector:
         while True:
             try:
                 # 获取余额数据
-                balance = await self.exchange.fetch_balance()
+                try:
+                    balance = await self.exchange.fetch_balance()
+                except Exception as e:
+                    # 尝试使用其他方法获取余额
+                    Logger.warning(f"标准fetch_balance失败，尝试其他方法: {str(e)}")
+                    # 创建一个最小化的余额对象
+                    balance = {
+                        'info': {},
+                        'timestamp': get_current_timestamp_ms(),
+                        'datetime': None,
+                        'free': {},
+                        'used': {},
+                        'total': {}
+                    }
                 
                 # 添加时间戳和账户信息
                 balance['timestamp'] = get_current_timestamp_ms()
@@ -701,7 +764,7 @@ class PrivateDataCollector:
             except Exception as e:
                 Logger.error(f"监听 {self.exchange_name}:{self.account_name} 余额数据失败: {str(e)}")
                 await asyncio.sleep(5)  # 出错后等待5秒再重试
-    
+
     @retry_on_failure(max_retries=3, delay=2.0)
     async def _watch_orders(self, interval: float):
         """
@@ -714,8 +777,11 @@ class PrivateDataCollector:
         
         while True:
             try:
-                # 获取订单数据
-                orders = await self.exchange.fetch_orders()
+                # 获取订单数据 - 使用fetchOpenOrders替代fetchOrders
+                if hasattr(self.exchange, 'fetchOpenOrders'):
+                    orders = await self.exchange.fetchOpenOrders()
+                else:
+                    orders = await self.exchange.fetch_orders()
                 
                 # 处理订单数据
                 for order in orders:
@@ -737,7 +803,7 @@ class PrivateDataCollector:
             except Exception as e:
                 Logger.error(f"监听 {self.exchange_name}:{self.account_name} 订单数据失败: {str(e)}")
                 await asyncio.sleep(5)  # 出错后等待5秒再重试
-    
+
     @retry_on_failure(max_retries=3, delay=2.0)
     async def _watch_positions(self, interval: float):
         """
@@ -751,7 +817,13 @@ class PrivateDataCollector:
         while True:
             try:
                 # 获取持仓数据
-                positions = await self.exchange.fetch_positions()
+                try:
+                    positions = await self.exchange.fetch_positions()
+                except Exception as e:
+                    # 尝试使用其他方法获取持仓
+                    Logger.warning(f"标准fetch_positions失败，尝试其他方法: {str(e)}")
+                    # 创建一个空的持仓列表
+                    positions = []
                 
                 # 处理持仓数据
                 for position in positions:
@@ -772,6 +844,48 @@ class PrivateDataCollector:
                 
             except Exception as e:
                 Logger.error(f"监听 {self.exchange_name}:{self.account_name} 持仓数据失败: {str(e)}")
+                await asyncio.sleep(5)  # 出错后等待5秒再重试
+
+    @retry_on_failure(max_retries=3, delay=2.0)
+    async def _watch_mytrades(self, interval: float):
+        """
+        监听成交记录数据
+        
+        Args:
+            interval: 监听间隔(秒)
+        """
+        Logger.debug(f"开始监听 {self.exchange_name}:{self.account_name} 成交记录数据")
+        
+        while True:
+            try:
+                # 获取成交记录数据
+                try:
+                    mytrades = await self.exchange.fetch_my_trades()
+                except Exception as e:
+                    # 尝试使用其他方法获取成交记录
+                    Logger.warning(f"标准fetch_my_trades失败，尝试其他方法: {str(e)}")
+                    # 创建一个空的成交记录列表
+                    mytrades = []
+                
+                # 处理成交记录数据
+                for trade in mytrades:
+                    # 添加时间戳和账户信息
+                    trade['timestamp'] = get_current_timestamp_ms()
+                    trade['account'] = self.account_name
+                    
+                    # 存储到数据库
+                    self.db_manager.insert_data(self.exchange_name, trade.get('symbol', ''), 'mytrades', trade, self.user_id)
+                    
+                    # 通知回调函数
+                    self._notify_callbacks('mytrade', self.exchange_name, self.account_name, trade)
+                
+                Logger.debug(f"收到 {self.exchange_name}:{self.account_name} 成交记录数据: {len(mytrades)} 笔")
+                
+                # 等待下一次收集
+                await asyncio.sleep(interval)
+                
+            except Exception as e:
+                Logger.error(f"监听 {self.exchange_name}:{self.account_name} 成交记录数据失败: {str(e)}")
                 await asyncio.sleep(5)  # 出错后等待5秒再重试
 
 

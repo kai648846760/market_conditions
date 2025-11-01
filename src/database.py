@@ -184,12 +184,48 @@ class DatabaseManager:
                     UNIQUE(timestamp, symbol, timeframe)
                 )
             ''')
-        elif table_name in ['balance', 'orders', 'mytrades', 'positions']:
-            cursor.execute(f'''
-                CREATE TABLE IF NOT EXISTS {table_name} (
+        elif table_name == 'balance':
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS balance (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     timestamp INTEGER NOT NULL,
-                    user_id TEXT NOT NULL,
+                    datetime TEXT NOT NULL,
+                    usdt REAL NOT NULL DEFAULT 0,
+                    data TEXT NOT NULL,
+                    UNIQUE(datetime)
+                )
+            ''')
+        elif table_name == 'orders':
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS orders (
+                    id TEXT PRIMARY KEY,
+                    symbol TEXT NOT NULL,
+                    type TEXT NOT NULL,
+                    price REAL NOT NULL,
+                    amount REAL NOT NULL,
+                    status TEXT NOT NULL,
+                    timestamp INTEGER NOT NULL,
+                    data TEXT NOT NULL
+                )
+            ''')
+        elif table_name == 'mytrades':
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS mytrades (
+                    id TEXT PRIMARY KEY,
+                    symbol TEXT NOT NULL,
+                    type TEXT NOT NULL,
+                    price REAL NOT NULL,
+                    amount REAL NOT NULL,
+                    fee REAL NOT NULL,
+                    timestamp INTEGER NOT NULL,
+                    data TEXT NOT NULL
+                )
+            ''')
+        elif table_name == 'positions':
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS positions (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    timestamp INTEGER NOT NULL,
                     symbol TEXT,
                     data TEXT NOT NULL
                 )
@@ -270,10 +306,88 @@ class DatabaseManager:
                 # 私有数据
                 # 使用原始数据中的时间戳，如果没有则使用当前时间戳
                 timestamp = data.get('timestamp', int(time.time() * 1000))
-                cursor.execute(f'''
-                    INSERT INTO {data_type} (timestamp, user_id, symbol, data)
-                    VALUES (?, ?, ?, ?)
-                ''', (timestamp, user_id, symbol, data_json))
+                
+                if data_type == 'balance':
+                    # 处理balance数据，每天只保留一条
+                    # 从时间戳获取日期
+                    dt = datetime.fromtimestamp(timestamp / 1000)
+                    date_str = dt.strftime('%Y-%m-%d')
+                    
+                    # 提取USDT余额
+                    usdt_balance = 0
+                    if isinstance(data, dict):
+                        # 尝试从不同的数据结构中提取USDT余额
+                        if 'info' in data and 'result' in data['info']:
+                            # Bybit API格式
+                            result = data['info']['result']
+                            if 'list' in result and result['list']:
+                                account = result['list'][0]
+                                if 'coin' in account:
+                                    for coin in account['coin']:
+                                        if coin.get('coin') == 'USDT':
+                                            usdt_balance = float(coin.get('walletBalance', 0))
+                                            break
+                        elif 'coins' in data and 'USDT' in data['coins']:
+                            # 已解析的格式
+                            usdt_balance = float(data['coins']['USDT'].get('total', 0))
+                    
+                    # 检查当天是否已有数据，如果有则更新，否则插入
+                    cursor.execute('''
+                        INSERT OR REPLACE INTO balance (timestamp, datetime, usdt, data)
+                        VALUES (?, ?, ?, ?)
+                    ''', (timestamp, date_str, usdt_balance, data_json))
+                    
+                elif data_type == 'orders':
+                    # 处理orders数据，根据返回数据的id做唯一处理
+                    order_id = data.get('id', '')
+                    order_symbol = data.get('symbol', '')
+                    order_type = data.get('type', '')
+                    order_price = float(data.get('price', 0))
+                    order_amount = float(data.get('amount', 0))
+                    order_status = data.get('status', '')
+                    
+                    cursor.execute('''
+                        INSERT OR REPLACE INTO orders (id, symbol, type, price, amount, status, timestamp, data)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (order_id, order_symbol, order_type, order_price, order_amount, order_status, timestamp, data_json))
+                    
+                else:
+                    # 其他私有数据（mytrades, positions）
+                    if data_type == 'mytrades':
+                        # 处理mytrades数据
+                        trade_id = data.get('id', '')
+                        trade_symbol = data.get('symbol', '')
+                        trade_type = data.get('type', '')
+                        
+                        # 安全地获取价格、数量和费用
+                        trade_price = data.get('price', 0)
+                        trade_amount = data.get('amount', 0)
+                        trade_fee = data.get('fee', 0)
+                        
+                        # 如果是字典，尝试获取值
+                        if isinstance(trade_price, dict):
+                            trade_price = trade_price.get('value', 0)
+                        if isinstance(trade_amount, dict):
+                            trade_amount = trade_amount.get('value', 0)
+                        if isinstance(trade_fee, dict):
+                            trade_fee = trade_fee.get('value', 0)
+                        
+                        # 转换为float
+                        trade_price = float(trade_price) if trade_price else 0
+                        trade_amount = float(trade_amount) if trade_amount else 0
+                        trade_fee = float(trade_fee) if trade_fee else 0
+                        
+                        cursor.execute('''
+                            INSERT OR REPLACE INTO mytrades (id, symbol, type, price, amount, fee, timestamp, data)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                        ''', (trade_id, trade_symbol, trade_type, trade_price, trade_amount, trade_fee, timestamp, data_json))
+                    else:
+                        # positions数据
+                        position_symbol = data.get('symbol', '')
+                        cursor.execute('''
+                            INSERT INTO positions (timestamp, symbol, data)
+                            VALUES (?, ?, ?)
+                        ''', (timestamp, position_symbol, data_json))
             
             conn.commit()
             
@@ -333,9 +447,7 @@ class DatabaseManager:
                     query += " AND timeframe = ?"
                     params.append(timeframe)
             elif data_type in ['balance', 'orders', 'mytrades', 'positions']:
-                query += " AND user_id = ?"
-                params.append(user_id)
-                
+                # 私有数据不再需要user_id条件，因为数据已按用户分库存储
                 if symbol:
                     query += " AND symbol = ?"
                     params.append(symbol)
